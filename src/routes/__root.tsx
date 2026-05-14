@@ -10,6 +10,8 @@ import {
 
 import appCss from "../styles.css?url";
 import { Toaster } from "@/components/ui/sonner";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 function NotFoundComponent() {
   return (
@@ -114,7 +116,22 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <SidebarProvider>
+        <div className="flex min-h-screen w-full bg-background">
+          <AppSidebar />
+          <div className="flex min-w-0 flex-1 flex-col">
+            <header className="sticky top-0 z-10 flex h-14 items-center gap-2 border-b border-border bg-background/80 px-4 backdrop-blur">
+              <SidebarTrigger />
+              <div className="ml-2 text-sm font-medium text-muted-foreground">
+                AI Workplace Productivity Assistant
+              </div>
+            </header>
+            <main className="flex-1 p-6 lg:p-8">
+              <Outlet />
+            </main>
+          </div>
+        </div>
+      </SidebarProvider>
       <Toaster richColors position="top-right" />
     </QueryClientProvider>
   );
