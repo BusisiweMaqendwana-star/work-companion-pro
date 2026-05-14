@@ -75,14 +75,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "AI-workplace-productivity-assistance" },
+      { name: "description", content: "The platform includes a Smart Email Generator for crafting tone-appropriate messages, a Meeting Notes Summarizer that extracts key points and action items" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "AI-workplace-productivity-assistance" },
+      { property: "og:description", content: "The platform includes a Smart Email Generator for crafting tone-appropriate messages, a Meeting Notes Summarizer that extracts key points and action items" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "AI-workplace-productivity-assistance" },
+      { name: "twitter:description", content: "The platform includes a Smart Email Generator for crafting tone-appropriate messages, a Meeting Notes Summarizer that extracts key points and action items" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/7ec3642b-81c7-4ee6-b64a-7bfe4613f52a" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/7ec3642b-81c7-4ee6-b64a-7bfe4613f52a" },
     ],
     links: [
       {
