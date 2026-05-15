@@ -7,7 +7,6 @@ A modern SaaS-style web app that helps professionals automate everyday work task
 > AI-generated content may require human review.
 
 ---
-
 ## Demo
 
 ### Dashboard
