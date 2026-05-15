@@ -1,80 +1,76 @@
-# README: AI Workplace Productivity Assistant
+# AI Workplace Productivity Assistant
 
-## 🚀 Overview
+A modern SaaS-style web app that helps professionals automate everyday work tasks with AI — drafting emails, summarizing meetings, planning tasks, researching topics, and chatting with an always-on assistant.
 
-The **AI Workplace Productivity Assistant** is a modern, responsive SaaS application designed to streamline professional workflows. By leveraging structured prompt engineering, the platform automates repetitive administrative tasks, allowing professionals to focus on high-impact work.
+**Live demo:** https://work-companion-pro.lovable.app
 
-Built with a "Clean-Professional" aesthetic, the app provides an intuitive dashboard experience where users can manage communication, documentation, and scheduling through a centralized AI-powered hub.
-
----
-
-## ✨ Core Features
-
-### 📧 Smart Email Generator
-
-Generate high-quality email drafts tailored to specific contexts.
-
-* **Prompt Logic:** Uses a tone-and-audience matrix (e.g., Executive, Casual, Urgent).
-* **Functionality:** Inputs for subject matter and recipient type to produce structured, ready-to-send copy.
-
-### 📝 Meeting Notes Summarizer
-
-Transform chaotic meeting transcripts into organized documentation.
-
-* **Structure:** Automatically extracts **Key Points**, **Action Items**, and **Deadlines**.
-* **Benefit:** Reduces manual post-meeting admin work by 90%.
-
-### 📅 AI Task Planner
-
-An intelligent prioritization engine for your to-do list.
-
-* **Logic:** Analyzes task urgency and impact to suggest an optimized daily schedule.
-* **UI:** Interactive card-based layout for easy task visualization.
-
-### 🔍 AI Research Assistant
-
-Accelerate information gathering.
-
-* **Capabilities:** Synthesizes complex topics into brief insights and high-level summaries.
-* **Output:** Professional briefs suitable for internal reports or quick decision-making.
-
-### 💬 AI Chatbot Interface
-
-A 24/7 productivity companion.
-
-* **Role:** Acts as a specialized workplace coach to answer quick queries or brainstorm ideas.
+> AI-generated content may require human review.
 
 ---
 
-## 🛠️ Technical Requirements & Design
+## Demo
 
-* **Modern SaaS UI:** Minimalist design using a sidebar navigation and card-based content layout.
-* **Responsive Design:** Fully optimized for desktop, tablet, and mobile viewing.
-* **Structured Prompting:** Each feature utilizes pre-defined prompt templates to ensure outputs remain professional, clear, and contextually accurate.
-* **State Management:** Real-time loading states to provide visual feedback during AI generation.
-* **Safety & Ethics:** Integrated disclaimer: *“AI-generated content may require human review”* to promote responsible usage.
+### Dashboard
+Card-based home with quick access to every tool.
 
----
+![Dashboard](docs/screenshots/dashboard.png)
 
-## 🎨 Design Style Guide
+### Smart Email Generator
+Tone- and audience-aware email drafting.
 
-* **Theme:** Light/Professional (Clean whites, soft grays, and primary accent colors).
-* **Typography:** Modern Sans-Serif (Inter or Roboto) for high readability.
-* **Layout:** Sidebar-focused navigation with a centralized workspace.
+![Email Generator](docs/screenshots/email.png)
 
----
+### AI Task Planner
+Prioritized, scheduled plans from a free-form task list.
 
-## 📖 How to Use (Prototype Flow)
+![Task Planner](docs/screenshots/tasks.png)
 
-1. **Navigate:** Use the sidebar to switch between the five core tools.
-2. **Input:** Provide context (e.g., paste meeting notes or email topics).
-3. **Generate:** Click the action button to trigger the AI engine.
-4. **Review:** Examine the output in the interactive cards.
-5. **Refine:** Use the Chatbot interface for further adjustments or follow-up questions.
+### AI Chatbot
+An always-on assistant for quick answers and brainstorming.
+
+![AI Chat](docs/screenshots/chat.png)
 
 ---
 
+## Features
 
----
+- **Smart Email Generator** — tone + audience-based, professional drafts
+- **Meeting Notes Summarizer** — extract key points, action items, and deadlines
+- **AI Task Planner** — Eisenhower-matrix prioritization with a suggested schedule
+- **AI Research Assistant** — structured briefings with insights, opportunities, and risks
+- **AI Chatbot** — multi-turn conversational assistant
+- Structured prompt engineering per feature for clear, professional outputs
+- Loading states, responsive design, and a sidebar + card SaaS layout
+- Human-review disclaimer surfaced in every output
 
-*Created using [Lovable.dev*](https://lovable.dev)
+## Tech Stack
+
+- **TanStack Start** (React 19 + Vite 7) with file-based routing
+- **TanStack Server Functions** (`createServerFn`) for AI calls
+- **Tailwind CSS v4** with semantic design tokens (`oklch`)
+- **shadcn/ui** components
+- **Lovable Cloud** (managed Supabase) for backend
+- **Lovable AI Gateway** — `google/gemini-3-flash-preview`
+
+## Project Structure
+
+```
+src/
+  components/             # AppSidebar, AIOutput, FeatureShell, shadcn UI
+  lib/ai.functions.ts     # Server functions + per-feature system prompts
+  routes/                 # index, email, meetings, tasks, research, chat
+  styles.css              # Design tokens, gradients, shadows
+```
+
+## Getting Started
+
+```sh
+bun install
+bun run dev
+```
+
+Then open the local preview URL printed in the terminal.
+
+## Deployment
+
+Published via Lovable. Open the project in [Lovable](https://lovable.dev/projects/dfb72dfa-816c-4de3-b0d5-db52a7f97827) and click **Share → Publish**.
